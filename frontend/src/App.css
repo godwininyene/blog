@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* 
+.slide{
+    background-image: url('assets/images/img-18.jpg');
+} */
+
+.comment-author:before {
+    content: '';
+    position: absolute;
+    right: -3px;
+    top: 20px;
+    width: 8px;
+    height: 8px;
+    border-left: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    transform: rotate(45deg);
+    background: #f9f9f9;
+    z-index: 10;
+}
+
+.show-more-snopt-tooltip {
+    position: absolute;
+    right: 0;
+    width: 190px;
+    background: #f9f9f9;
+    top: 100%;
+    margin-top: 30px;
+    z-index: 20;
+    border: 1px solid #eee;
+    overflow: hidden;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: all 300ms linear;
+    /* opacity: 0;
+    visibility: hidden; */
+    box-shadow: 0 5px 5px rgb(0 0 0 / 6%);
+}
+
+.show-more-snopt-tooltip a {
+    display: block;
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+    font-size: 11px;
+    color: #000;
+    font-weight: 700;
+    position: relative;
+}
+
+@media screen and (max-width: 768px) {
+    .comment-author:before {display: none;}
+}
